@@ -44,7 +44,7 @@ describe("OdeonApi", () => {
     test("should throw an error if the API failed to provide a valid response", async () => {
       const mockedError = new Error("Weird");
       mockedAxios.get.mockRejectedValue(mockedError);
-      let error : FriendlyError = new FriendlyError("nope");
+      let error = new FriendlyError("nope");
       try {
         const oapi = new OdeonApi();
         await oapi.initialise();
@@ -75,7 +75,7 @@ describe("OdeonApi", () => {
     test("should throw an error if the API failed to provide a valid response", async () => {
       const mockedError = new Error("Weird");
       mockedAxios.get.mockRejectedValue(mockedError);
-      let error : FriendlyError = new FriendlyError("nope");
+      let error = new FriendlyError("nope");
       try {
         const oapi = new OdeonApi();
         await oapi.initialise();
@@ -85,6 +85,18 @@ describe("OdeonApi", () => {
       }
       expect(error.message).toBe("Unable to retrieve showtimes on 2020-01-01 for cinema site 149");
       expect(error.err).toBe(mockedError);
+    });
+    test("should throw an error if not initialised", async () => {
+      const expectedError = new Error("Odean API Not Initialised");
+      let error = new FriendlyError("nope");
+      try {
+        const oapi = new OdeonApi();
+        await oapi.getShowtimesForCinema(149, new Date("2020-01-01"));
+      } catch (err) {
+        error = err;
+      }
+      expect(error.message).toBe("Unable to retrieve showtimes on 2020-01-01 for cinema site 149");
+      expect(error.err).toStrictEqual(expectedError);
     });
   });
 });
