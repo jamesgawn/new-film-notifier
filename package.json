@@ -1,0 +1,49 @@
+{
+  "name": "cinema-info-service",
+  "version": "1.0.0",
+  "description": "A library to simplify access to cinema listings for Odeon.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "postbuild": "cp package.json ./dist/package.json && npm install --production --prefix ./dist/",
+    "test": "jest",
+    "coverage": "jest --collectCoverage",
+    "lint": "eslint src/**/*.ts",
+    "tcl": "npm run test && npm run coverage && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesgawn/cinema-info-service.git"
+  },
+  "author": {
+    "name": "James Gawn",
+    "email": "james@gawn.uk",
+    "url": "https://gawn.uk"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesgawn/cinema-info-service/issues"
+  },
+  "homepage": "https://github.com/jamesgawn/cinema-info-service#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bunyan": "^1.8.14",
+    "date-fns": "^2.16.1"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.6",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "typescript": "^4.0.3",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.1",
+    "eslint": "^7.10.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-config-google": "^0.14.0"
+  }
+}
