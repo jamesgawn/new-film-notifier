@@ -1,7 +1,7 @@
 {
-  "name": "@jamesgawn/cinema-info-service",
+  "name": "@jamesgawn/new-film-notifier",
   "version": "1.0.7",
-  "description": "A library to simplify access to cinema listings for Odeon.",
+  "description": "A library to automate tweeting when new films become available for booking at Odeon.",
   "main": "./dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesgawn/cinema-info-service.git"
+    "url": "https://github.com/jamesgawn/new-film-notifier.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -27,13 +27,15 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jamesgawn/cinema-info-service/issues"
+    "url": "https://github.com/jamesgawn/new-film-notifier/issues"
   },
-  "homepage": "https://github.com/jamesgawn/cinema-info-service#readme",
+  "homepage": "https://github.com/jamesgawn/new-film-notifier#readme",
   "dependencies": {
+    "aws-sdk": "^2.958.0",
     "axios": "^0.21.1",
     "bunyan": "^1.8.14",
-    "date-fns": "^2.16.1"
+    "date-fns": "^2.16.1",
+    "twitter-lite": "^0.14.0"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.6",

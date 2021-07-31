@@ -1,14 +1,14 @@
 # Cinema Information Service
 
-A simple library intended to simplify obtaining Odeon cinema listing information. 
+A library to automate tweeting when new films become available for booking at Odeon. 
 
 # Usage
 
 ```typescript
-import {CinemaInfoService} from "cinema-information-service";
+import {NewFilmNotifier} from "cinema-information-service";
 
-const cis = new CinemaInfoService();
-await cis.initialise();
-// Obtain cinema showings for BFI Imax from today until 2 days time.
-cis.getNextShowingByFilmForCinema(150, new Date(), 2)
+const nfn = new NewFilmNotifier("dynamoDBtable", "twitterConsumerKey", "twitterConsumerSecret", "twitterAccessTokenKey", "twitterAccessTokenSecret");
+
+// Check for films at the BFI IMAX, looking forward 30 days.
+nfn.check(150, 30, false)
 ```

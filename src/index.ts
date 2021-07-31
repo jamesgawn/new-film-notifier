@@ -1,4 +1,3 @@
-import {CinemaInfoService} from "./CinemaInfoService";
-import {FilmRecord} from "./domain/FilmRecord";
+import {NewFilmNotifier} from "./NewFilmNotifier";
 
-export {CinemaInfoService, FilmRecord}
+export {NewFilmNotifier}
