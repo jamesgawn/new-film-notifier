@@ -1,6 +1,6 @@
 {
   "name": "@jamesgawn/new-film-notifier",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A library to automate tweeting when new films become available for booking at Odeon.",
   "main": "./dist/index.js",
   "scripts": {
