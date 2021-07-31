@@ -115,11 +115,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
           tag-prefix: 'v'
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@jamesgawn'
       - name: NPM Install
         run: npm install
       - name: Build
