@@ -5,7 +5,6 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
-    "postbuild": "cp package.json ./dist/package.json && npm install --production --prefix ./dist/",
     "test": "jest",
     "coverage": "jest --collectCoverage",
     "lint": "eslint src/**/*.ts",
@@ -19,7 +18,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "files": [
-    "dist"
+    "dist/*"
   ],
   "author": {
     "name": "James Gawn",
