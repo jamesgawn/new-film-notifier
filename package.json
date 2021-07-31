@@ -1,6 +1,6 @@
 {
   "name": "cinema-info-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to simplify access to cinema listings for Odeon.",
   "main": "./dist/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/jamesgawn/cinema-info-service.git"
   },
-  "files":[
+  "files": [
     "dist"
   ],
   "author": {
