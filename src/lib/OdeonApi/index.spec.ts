@@ -47,7 +47,7 @@ describe("OdeonApi", () => {
       let error : FriendlyError = new FriendlyError("nope");
       try {
         const oapi = new OdeonApi();
-        oapi.initialise();
+        await oapi.initialise();
         await oapi.getAllFilmsForCinema(149);
       } catch (err) {
         error = err;
