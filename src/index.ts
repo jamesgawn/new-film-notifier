@@ -1,3 +1,4 @@
 import {CinemaInfoService} from "./CinemaInfoService";
+import {FilmRecord} from "./domain/FilmRecord";
 
-export {CinemaInfoService}
+export {CinemaInfoService, FilmRecord}
