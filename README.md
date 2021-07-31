@@ -1,4 +1,4 @@
-# Cinema Information Service
+# New Film Notifier
 
 A library to automate tweeting when new films become available for booking at Odeon. 
 
